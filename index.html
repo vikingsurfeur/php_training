@@ -14,18 +14,47 @@
         <h1 class="header__title">Form Training PHP Method POST</h1>
     </header>
     <main class="main">
-        <form action="contact.php" method="POST" class="main__form">
+        <form 
+        action="contact.php"
+        method="POST" 
+        enctype="multipart/form-data"
+        class="main__form">
             <label for="email">
                 Votre email :
-                <input id="email" type="email" name="userEmail" value="" required>
+                <input
+                id="email"
+                type="email"
+                name="userEmail"
+                value=""
+                placeholder="elon.musk@example.com"
+                required>
             </label>
             <label for="password">
                 Votre mot de passe :
-                <input id="password" type="password" name="userPassword" value="" required>
+                <input
+                id="password"
+                type="password"
+                name="userPassword"
+                value=""
+                placeholder="******"
+                required>
+            </label>
+            <label for="file">
+                Votre photo de profil :
+                <input
+                id="file"
+                type="file"
+                name="userAvatar"
+                required>
             </label>
             <label for="confirm">
                 Je confirme avoir pris connaissance des mentions légales
-                <input id="confirm" type="checkbox" name="userConfirm" value="1" required>
+                <input
+                id="confirm"
+                type="checkbox"
+                name="userConfirm"
+                value="1"
+                required>
             </label>
             <button type="submit" name="button">
                 Validez
