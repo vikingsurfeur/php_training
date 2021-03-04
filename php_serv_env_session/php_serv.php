@@ -19,6 +19,17 @@ foreach ($_SERVER as $key => $value) {
 
 // ACCESS TO THE ENV VARIABLE
 
-$_ENV['DATABASE_NAME'];
-// Or
-getenv('DATABAS_NAME');
+// $_ENV['DATABASE_NAME'];
+// // Or
+// getenv('DATABAS_NAME');
+
+// DISPLAY SERVER REQUEST
+
+echo $_SERVER['REQUEST_METHOD'].'<br>'; // Get a method Variable
+echo $_SERVER['REMOTE_ADDR'].'<br>'; // Get a IP address of Client
+echo $_SERVER['SCRIPT_FILENAME'].'<br>'; // Get a file as current page / absolute path
+
+// CREATE AN ENVIRONNEMENT VARIABLE SERVER
+
+putenv('contexte=developpement'); // Add the variable
+echo getenv('contexte'); // Display the variable with getenv()
