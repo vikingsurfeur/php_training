@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Method POST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Form Training PHP Method POST</h1>
+    </header>
+    <main class="main">
+        <form action="contact.php" method="POST" class="main__form">
+            <label for="email">
+                Votre email : 
+                <input id="email" type="email" name="user[]" value="" required>
+            </label>
+            <label for="password">
+                Votre mot de passe : 
+                <input id="password" type="password" name="user[]" value="" required>
+            </label>
+            <label for="confirm">
+                Je confirme avoir pris connaissance des mentions légales
+                <input id="confirm" type="checkbox" name="user[]" value="1" required>
+            </label>
+            <button type="submit" name="button">
+                Validez
+            </button>
+        </form>
+    </main>
+</body>
+</html>
