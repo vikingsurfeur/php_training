@@ -1,23 +1,21 @@
 <?php
 
-    print_r($_POST['user']);
+    // print_r($_POST['user']);
 
-    function getUser(): array
-    {
+    // PRINT THE USER VALUE
 
-        $user           = $_POST['user'];
-        $userIndex      = count($user);
-        $userFormatted  = [];
+    function printUserValue($key) {
 
-        for ($i = 0; $i < $userIndex; $i++) { 
-            $userFormatted [] = [
-                $user[$i]
-                // $user[$i + 1],
-                // $user[$i + 2]
-            ];
+        if(!isset($_POST[$key])) {
+            echo sprintf('Cette %s n\'existe pas, merci de là renseigner <br/>', $key);
+            return;
+        } else {
+            echo sprintf('Cette valeur de clef %s vaut : <br/>', $key);
+            echo $_POST[$key].'<br/>';
         }
-
-        return $userFormatted;
+        
     }
 
-    print_r(getUser());
+    printUserValue('userEmail');
+    printUserValue('userPassword');
+    printUserValue('userConfirm');
