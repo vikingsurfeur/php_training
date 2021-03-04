@@ -19,4 +19,14 @@ setcookie('username', '', time() - 60);
 
 // SUPERGLOBAL
 
-var_dump($_COOKIE); // display all the cookies
+var_dump($_COOKIE); // display all the cookies IT'S AN ASSOCIATIVE ARRAY
+
+// APPLICATION
+
+setcookie('USER_LANG', 'fr', time() + 3600);
+
+if ($_COOKIE['USER_LANG'] === 'fr') {
+    echo '<h2>Bienvenue</h2>';
+} else {
+    echo '<h2>Welcome</h2>';
+}
