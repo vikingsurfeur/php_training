@@ -1,5 +1,11 @@
 <?php
 
+    $userInfo = $_POST['user'];
+
+    foreach ($userInfo as $userKey => $userValue) {
+        echo "[$userKey] = [$userValue] <br/>";
+    }
+
     // print_r($_POST['user']);
 
     // PRINT THE USER VALUE
