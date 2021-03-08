@@ -1,0 +1,3 @@
+seconde ligne de contenu que j'écris
+contenu non écrasé grâce à la constante FILE_APPEND
+nouvelle ligne de contenu et saut de ligne grace à PHP.EOL
