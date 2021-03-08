@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 67.5%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 3rem;
+}
+
+form {
+    width: 20vw;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form :is(input, button) {
+    font-size: 3rem;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 1rem;
+    margin-top: 2rem;
+}
