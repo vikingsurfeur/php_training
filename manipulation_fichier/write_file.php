@@ -51,3 +51,12 @@ foreach ($arrayCsv as $davidKey) {
     fputcsv($dbhThree, $davidKey, ';');
 }
 fclose($dbhThree); // nE JAMAIS oublier de fermer son fichier !!!
+
+// Lire du CSV
+
+$dbhFour = fopen('fichier.csv', 'r'); // OUverture en lecture
+while ($ligneContenu = fgetcsv($dbhFour, 4096, ';')) {
+    print_r($ligneContenu); // 4096 max line !!!
+    echo '<br>';
+}
+fclose($dbhFour);
