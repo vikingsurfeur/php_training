@@ -26,7 +26,7 @@ fclose($dbh);
 // Read the content in read mode fopen
 
 $dbhTwo = fopen('fopen_file.txt', 'r' ); // Mode lecture seule
-while ($line = fgets($dbhTwo, 4096)) {
+while ($line = fgets($dbhTwo, 4096)) { // or while (($line = fgets($dbhTwo)) !== false)
     echo '<pre>'.$line.'</pre>';
 }
 fclose($dbhTwo);
