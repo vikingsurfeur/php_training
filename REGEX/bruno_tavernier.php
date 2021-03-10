@@ -57,10 +57,16 @@ else echo 'Veuillez ressaisir votre email<br>';
 // Fonction preg_replace
 
 $date               = 'April 15, 2020';
-const PATTERN_DATE  = '/(\w+) (\d+), (\d+) /i';
-$replaceDate        = '${2} ${1} ${3}';
-
+const PATTERN_DATE  = '/(\w+) (\d+), (\d+)/i';
+$replaceDate        = '${2} ${1} ${3}'; // Prend le contenu de la chaine 2 et la met en position 1, prend la chaine 1 et la met en position 2 et la 3 reste en 3
 echo preg_replace(PATTERN_DATE, $replaceDate, $date).'<br>';
+
+$dateTwo                = '30/09/2020';
+const PATTERN_DATE_US   =  '/(\d+)\/(\d+)\/(\d+)/i';
+$replaceDateUs          = '${2}/${1}/${3}';
+echo preg_replace(PATTERN_DATE_US, $replaceDateUs, $dateTwo);  
+
+
 
 
 
