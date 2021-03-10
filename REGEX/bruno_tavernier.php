@@ -62,7 +62,7 @@ $replaceDate        = '${2} ${1} ${3}'; // Prend le contenu de la chaine 2 et la
 echo preg_replace(PATTERN_DATE, $replaceDate, $date).'<br>';
 
 $dateTwo                = '30/09/2020';
-const PATTERN_DATE_US   =  '/(\d+)\/(\d+)\/(\d+)/i';
+const PATTERN_DATE_US   =  '/(\d+)\/(\d+)\/(\d+)/i'; // Pensez à échaper les slashs avec les backs slashs
 $replaceDateUs          = '${2}/${1}/${3}';
 echo preg_replace(PATTERN_DATE_US, $replaceDateUs, $dateTwo);  
 
