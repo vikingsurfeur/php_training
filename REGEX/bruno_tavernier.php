@@ -52,6 +52,10 @@ if ($pregMatchTelTwo) {
 if ($subjectMail) echo 'Ceci est un bien un email valide<br>';
 else echo 'Veuillez ressaisir votre email<br>';
 
+// I can checking a right email with this function
+
+var_dump(filter_var('g.lagaffe@example.info', FILTER_VALIDATE_EMAIL));
+
 // On a la possibilité de récupérer les données de la comparaison dans un tableau comme ceci preg_match($pattern, $subject, $matches); où $matches renvoi un array contenant les données de comparaison
 
 // Fonction preg_replace
