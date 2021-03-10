@@ -24,15 +24,18 @@
 /(to){2,5}/     => entre deux et cinq fois la cahine 'to' qui se suit
 */
 
-$patternTel     = '/^(\d\d\s){4}(\d\d)$/'; // Contient un numéro de téléphone séparé par des espaces
-$patternTelTwo  = '/^(\d\d\.){4}(\d\d)$/'; // Contient un numéro de téléphone séparé par des points
+const PATTERN_TELSPACE      = '/^(\d\d\s){4}(\d\d)$/'; // Contient un numéro de téléphone séparé par des espaces
+const PATTERN_TELDOT        = '/^(\d\d\.){4}(\d\d)$/'; // Contient un numéro de téléphone séparé par des points
+const PATTERN_MAIL          = '/^[\w\.-]+@[\w\.-]+\.[a-z]{2,5}$/i'; // Vérification email
 $subjectTel     = '04 90 72 56 89';
 $subjectTelTwo  = '04.90.72.56.89';
+$subjectMail    = 'g.lagaffe@example.info';
 
 // La fonction preg_match() vérifie le pattern injecté, par rapport à un sujet, qui va là renvoyer sous forme de tableau dans le troisième paramètre
 
-$pregMatchTel       = preg_match($patternTel, $subjectTel);
-$pregMatchTelTwo    = preg_match($patternTelTwo, $subjectTelTwo);
+$pregMatchTel       = preg_match(PATTERN_TELSPACE, $subjectTel);
+$pregMatchTelTwo    = preg_match(PATTERN_TELDOT, $subjectTelTwo);
+$pregMatchMail      = preg_match(PATTERN_MAIL, $subjectMail);
 
 if ($pregMatchTel) {
     echo 'Ceci est bien un numéro de téléphone séparé par des espaces<br>';
@@ -45,6 +48,21 @@ if ($pregMatchTelTwo) {
 } else {
     echo 'Oups, ceci n\'est pas un numéro de téléphone<br>';
 }
+
+if ($subjectMail) echo 'Ceci est un bien un email valide<br>';
+else echo 'Veuillez ressaisir votre email<br>';
+
+// On a la possibilité de récupérer les données de la comparaison dans un tableau comme ceci preg_match($pattern, $subject, $matches); où $matches renvoi un array contenant les données de comparaison
+
+// Fonction preg_replace
+
+$date               = 'April 15, 2020';
+const PATTERN_DATE  = '/(\w+) (\d+), (\d+) /i';
+$replaceDate        = '${2} ${1} ${3}';
+
+echo preg_replace(PATTERN_DATE, $replaceDate, $date).'<br>';
+
+
 
 
 
