@@ -22,4 +22,18 @@ $coupleBouscarle = new Couple(
     $candy
 );
 
-var_dump($coupleBouscarle);
+// Warning, Object variable per reference, it's not a comy like a variable
+
+function changeValueObject(User $user)
+{
+    $user->name = 'Goret';
+    echo $user->name.'<br>';
+}
+
+$candy->name = 'Bouscarle';
+changeValueObject($candy);
+echo $candy->name.'<br>';
+
+//var_dump($david);
+//var_dump($candy);
+//var_dump($coupleBouscarle);

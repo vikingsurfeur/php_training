@@ -22,6 +22,3 @@ echo
         'Username of Candy : '.$candy->username.'<br>'.
         $candy->sayHello().
     '</pre>';
-
-//var_dump($david);
-//var_dump($candy);
