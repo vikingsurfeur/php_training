@@ -4,8 +4,29 @@
 
 class User
 {
-    public int $id; // Attribut with no value
-    public string $civility; // Attribut with no value too
+    // Add some attribute
+    public int $id; // Attribute with no value
+    public string $civility; // Attribute with no value too
     public string $name     = 'John'; // Default FirstName of our users but the value can change
     public string $username = 'Doe'; // Default Surname of our user but the value can change
+
+    // Add a constructor
+    public function __construct(int $id, string $civility, string $name, string $username)
+    {
+        $this->id       = $id;
+        $this->civility = $civility;
+        $this->name     = $name;
+        $this->username = $username;
+    }
+
+    // Add a method
+    public function sayHello(): string
+    {
+        return
+            'Bonjour, je m\'appelle '.
+            $this->civility.' '.
+            $this->username.
+            ' et mon id est le n° '.
+            $this->id;
+    }
 }
