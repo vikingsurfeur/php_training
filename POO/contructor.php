@@ -22,7 +22,7 @@ $coupleBouscarle = new Couple(
     $candy
 );
 
-// Warning, Object variable per reference, it's not a comy like a variable
+// Warning, Object variable per reference, it's not a copy like a variable
 
 function changeValueObject(User $user)
 {
