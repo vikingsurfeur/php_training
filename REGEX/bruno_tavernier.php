@@ -68,7 +68,15 @@ echo preg_replace(PATTERN_DATE, $replaceDate, $date).'<br>';
 $dateTwo                = '30/09/2020';
 const PATTERN_DATE_US   =  '/(\d+)\/(\d+)\/(\d+)/i'; // Pensez à échaper les slashs avec les backs slashs
 $replaceDateUs          = '${2}/${1}/${3}';
-echo preg_replace(PATTERN_DATE_US, $replaceDateUs, $dateTwo);  
+echo preg_replace(PATTERN_DATE_US, $replaceDateUs, $dateTwo).'<br>';
+
+// return preg_match_all
+
+$patternPregAll     = '/[2-6]/';
+$subjectPregAll     = '0123456789 0123456789';
+$pregMatchAll       = preg_match_all($patternPregAll, $subjectPregAll, $matchesPregAll);
+
+var_dump($pregMatchAll);
 
 
 

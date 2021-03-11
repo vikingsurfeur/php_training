@@ -23,12 +23,13 @@ function writeInContactFile($message)
 }
 
 function sendUserMessage() {
+    $errorMsg   = "Vous n'avez pas renseigné tous les champs, veuillez resaisir les informations";
     if ((!empty($_POST['name']) && !empty(trim($_POST['name']))) && 
             (!empty($_POST['email']) && !empty(trim($_POST['email']))) && 
                 (!empty($_POST['message']) && !empty(trim($_POST['message'])))) {
         echo require_once 'message.html';
     } else {
-        echo 'Vous n\'avez pas renseigné tous les champs, veuillez resaisir les informations';
+        echo $errorMsg;
     }
 }
 
