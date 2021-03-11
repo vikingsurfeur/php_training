@@ -1,7 +1,7 @@
 <?php
 
-require_once ('./classes/User.php');
-require_once ('./classes/Couple.php');
+require_once('./classes/User.php');
+require_once('./classes/Couple.php');
 
 $david = new User(
     1,
