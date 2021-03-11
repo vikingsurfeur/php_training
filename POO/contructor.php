@@ -2,11 +2,23 @@
 
 require_once ('./classes/User.php');
 
-$candy  = new User(
+$david = new User(
+    1,
+    'Mr',
+    'Bouscarle',
+    'davidCoder'
+);
+
+$candy = new User(
     2,
     'Mme',
     'Bouscarle',
     'candyDance'
 );
 
-var_dump($candy);
+$coupleBouscarle = new Couple(
+    $david,
+    $candy
+);
+
+var_dump($coupleBouscarle);
