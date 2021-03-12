@@ -3,10 +3,10 @@
 
 class Couple
 {
-    public User $user1;
-    public User $user2;
+    public Buyer $user1;
+    public Buyer $user2;
 
-    public function __construct(User $user1, User $user2)
+    public function __construct(Buyer $user1, Buyer $user2)
     {
         $this->user1 = $user1;
         $this->user2 = $user2;

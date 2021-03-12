@@ -2,13 +2,13 @@
 
 require_once('./classes/User.php');
 
-$david              = new User();
+$david              = new Buyer();
 $david->id          = 1;
 $david->civility    = 'Mr';
 $david->name        = 'Bouscarle';
 $david->username    = 'davidCoder';
 
-$candy              = new User();
+$candy              = new Buyer();
 $candy->id          = 2;
 $candy->civility    = 'Mme';
 $candy->name        = 'Bouscarle';

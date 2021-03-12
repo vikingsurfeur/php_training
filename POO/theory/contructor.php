@@ -3,14 +3,14 @@
 require_once('./classes/User.php');
 require_once('./classes/Couple.php');
 
-$david = new User(
+$david = new Buyer(
     1,
     'Mr',
     'Bouscarle',
     'davidCoder'
 );
 
-$candy = new User(
+$candy = new Buyer(
     2,
     'Mme',
     'Bouscarle',
@@ -24,7 +24,7 @@ $coupleBouscarle = new Couple(
 
 // Warning, Object variable per reference, it's not a copy like a variable
 
-function changeValueObject(User $user)
+function changeValueObject(Buyer $user)
 {
     $user->name = 'Goret';
     echo $user->name.'<br>';
