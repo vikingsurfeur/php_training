@@ -12,4 +12,4 @@ $posts = [
     ['title' => 'Comment récupérer le contenu de mon formulaire ?', 'createdAt' => new \DateTime('2020-02-04')],
 ];
 unset($posts[$_GET['id']]);
-header('Location: index.php');
+header('Location: header.php');

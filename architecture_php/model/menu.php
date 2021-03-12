@@ -1,6 +1,6 @@
 <?php
 
-const PAGE_INDEX    = '/php_training/architecture_php/index.php';
+const PAGE_INDEX    = '/php_training/architecture_php/header.php';
 const PAGE_TEAM     = '/php_training/architecture_php/pages/team.php';
 const PAGE_ABOUT    = '/php_training/architecture_php/pages/about.php';
 
