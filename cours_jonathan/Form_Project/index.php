@@ -1,15 +1,18 @@
 <?php
-require_once 'Form.php';
-require_once 'Conversion.php';
-$form = new Form($_POST);
-include_once 'header.php';
+require_once './Classes/Autoloader.php';
+Autoloader::register();
 ?>
 
-<form action="#" method="post">
+<?php
+include_once './modules/header.php';
+$bootstrapForm = new BootstrapForm($_POST);
+?>
+
+<form class="form" action="#" method="post">
     <?php
-        echo $form->input('username','text');
-        echo $form->input('password', 'password');
-        echo $form->submit();
+        echo $bootstrapForm->input('username','text');
+        echo $bootstrapForm->input('password', 'password');
+        echo $bootstrapForm->submit();
 //        var_dump($_POST['username']);
 //        var_dump($_POST['password']);
         echo '<br>';
@@ -18,4 +21,5 @@ include_once 'header.php';
 </form>
 
 <?php
-include_once 'footer.php';
+include_once './modules/footer.php';
+?>

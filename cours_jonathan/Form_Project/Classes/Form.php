@@ -1,6 +1,6 @@
 <?php
 
-
+namespace\HTML\Form;
 use JetBrains\PhpStorm\Pure;
 
 /**
@@ -12,7 +12,7 @@ class Form
     /**
      * @var array Données utilisées par le formulaire
      */
-    private array $data;
+   protected array $data;
 
     /**
      * @var string Tag utilisées dans la fonction surround(); Permet d'entourer les groupes input par une <div>
@@ -32,7 +32,7 @@ class Form
      * @param $html string Entoure le code HTML d'une balise div
      * @return string
      */
-    private function surround($html): string
+   protected function surround($html): string
     {
         return "<{$this->tag}>{$html}</{$this->tag}>";
     }
@@ -41,7 +41,7 @@ class Form
      * @param $index string Index de la valeur à récupérer
      * @return mixed|null
      */
-    private function getValue($index)
+   protected function getValue($index)
     {
         return isset($this->data[$index]) ? $this->data[$index] : null ;
     }
