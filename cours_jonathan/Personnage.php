@@ -3,9 +3,10 @@
 
 class Personnage
 {
-    private int $vie = 80;
-    private int $atk = 20;
-    private string $nom;
+    protected int $vie = 80; // Children Class can modified the Variable
+    // if variable was defined in private mode, children can't redefined it
+    protected int $atk = 20;
+    protected string $nom;
 
     public function __construct(string $nom)
     {
@@ -34,14 +35,14 @@ class Personnage
     public function regenerer(int $gainVie = null): int
     {
         if (is_null($gainVie)) {
-            $this->vie = 80;
+            return $this->vie = 80;
         } else {
-            $this->vie += $gainVie;
+            return $this->vie += $gainVie;
         }
     }
 
     public function attaque(Personnage $personnage): int
     {
-        $personnage->vie -= $this->atk;
+        return $personnage->vie -= $this->atk;
     }
 }
