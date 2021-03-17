@@ -1,8 +1,7 @@
 <?php
 
-namespace\HTML\Form;
+namespace Tutorial\HTML;
 use JetBrains\PhpStorm\Pure;
-
 /**
  * Class Form
  * Permet de générer un formulaire rapidement et simplement

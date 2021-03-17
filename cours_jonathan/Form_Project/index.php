@@ -1,9 +1,9 @@
 <?php
+use Tutorial\HTML\BootstrapForm;
+use Tutorial\Autoloader;
+use Tutorial\Conversion;
 require_once './Classes/Autoloader.php';
 Autoloader::register();
-?>
-
-<?php
 include_once './modules/header.php';
 $bootstrapForm = new BootstrapForm($_POST);
 ?>

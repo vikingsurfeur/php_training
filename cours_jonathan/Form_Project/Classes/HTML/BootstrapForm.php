@@ -1,8 +1,9 @@
 <?php
 
+namespace Tutorial\HTML;
 require_once 'Form.php';
 use JetBrains\PhpStorm\Pure;
-class BootstrapForm extends HTML\Form
+class BootstrapForm extends Form
 {
     protected function surround($html): string
     {

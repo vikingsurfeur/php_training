@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Tutorial;
 class Conversion
 {
     /**
